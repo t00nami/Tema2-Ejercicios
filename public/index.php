@@ -56,20 +56,20 @@
 	</li>
 	<li><h3>Hoja número 4</h3>
 		<ul>
-			<li>Problema 1</li>
-			<li>Problema 2</li>
-			<li>Problema 3</li>
-			<li><a href="Hoja 3/ejercicio_3_4.php">Problema 4</a></li>
-			<li><a href="Hoja 3/ejercicio_3_5.php">Problema 5</a></li>
+			<li><a href="Hoja 4/ejercicio_4_1.php">Problema 1</a></li>
+			<li><a href="Hoja 4/ejercicio_4_2.php">Problema 2</a></li>
+			<li><a href="Hoja 4/ejercicio_4_3.php">Problema 3</a></li>
+			<li><a href="Hoja 4/ejercicio_4_4.php">Problema 4</a></li>
+			<li><a href="Hoja 4/ejercicio_4_5.php">Problema 5</a></li>
 		</ul>
 	</li>
 	<li><h3>Hoja número 5</h3>
 		<ul>
-			<li>Problema 1</li>
-			<li>Problema 2</li>
-			<li>Problema 3</li>
-			<li><a href="Hoja 3/ejercicio_3_4.php">Problema 4</a></li>
-			<li><a href="Hoja 3/ejercicio_3_5.php">Problema 5</a></li>
+			<li><a href="Hoja 5/ejercicio_5_1.php">Problema 1</a></li>
+			<li><a href="Hoja 5/ejercicio_5_2.php">Problema 2</a></li>
+			<li><a href="Hoja 5/ejercicio_5_3.php">Problema 3</a></li>
+			<li><a href="Hoja 5/ejercicio_5_4.php">Problema 4</a></li>
+			<li><a href="Hoja 5/ejercicio_5_5.php">Problema 5</a></li>
 		</ul>
 	</li>
 </ul>

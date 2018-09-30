@@ -6,14 +6,14 @@ function numeroEntero($i, $j){
 
  for ($k=1; $k <= $numero; $k++) {
 
- 	if ($k%$i == 0 && $k%$j == 0){
+ 	if ($i%$k == 0 && $j%$k == 0){
  		echo $k . '<br>';
  	} 
  }
 
 }
 
-numeroEntero(3,87);
+numeroEntero(10,20);
 
 ?>
 
