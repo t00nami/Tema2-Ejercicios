@@ -45,13 +45,13 @@
 	</li>
 	<li><h3>Hoja número 3</h3>
 		<ul>
-			<li>Problema 1</li>
-			<li>Problema 2</li>
-			<li>Problema 3</li>
+			<li><a href="Hoja 3/ejercicio_3_1.php">Problema 1</a></li>
+			<li><a href="Hoja 3/ejercicio_3_2.php">Problema 2</a></li>
+			<li><a href="Hoja 3/ejercicio_3_3.php">Problema 3</a></li>
 			<li><a href="Hoja 3/ejercicio_3_4.php">Problema 4</a></li>
 			<li><a href="Hoja 3/ejercicio_3_5.php">Problema 5</a></li>
-			<li>Problema 6</li>
-			<li>Problema 7</li>
+			<li><a href="Hoja 3/ejercicio_3_6.php">Problema 6</a></li>
+			<li><a href="Hoja 3/ejercicio_3_7.php">Problema 7</a></li>
 		</ul>
 	</li>
 	<li><h3>Hoja número 4</h3>

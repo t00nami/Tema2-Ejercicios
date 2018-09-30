@@ -1,23 +1,24 @@
 <?php
 
 
-$año = 2019;
+for ($i=1; $i <= 100; $i++){
 
-$a = $año % 19;
-$b = $año % 4;
-$c = $año % 7;
-$d = (19 * $a + 24) % 30;
-$e = (2 * $b + 4 * $c + 6 * $d + 5) % 7;
+echo $i . ', ';
 
-$fecha = 22 + $d + $e;
+if ($i == 10 || $i == 20 || $i == 30 || $i == 40 || $i == 50 || $i == 60 || $i == 70 || $i == 80 || $i == 90) {
+		echo '<br>';
+	}
 
-if ($fecha < 32){
-	echo "El domingo de pascua es el $fecha de Marzo<br>";
-}else{
-	echo 'El domingo de pascua es el ' . ($fecha - 31) . ' de Abril<br>';
+if ($i == 100) {
+		echo '<br> Fin del programa';
+	}
+
+
 }
 
 ?>
+
+
 <br>
 <br>
 <br>

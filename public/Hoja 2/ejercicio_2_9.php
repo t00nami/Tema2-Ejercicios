@@ -1,33 +1,23 @@
 <?php
 
 
-$numero = 10;
-$resultado = 1;
+for ($i=2; $i <= 100 ; $i++) { 
 
-for ($i=0; $i < $numero; $i++) { 
-	$resultado = $resultado * ($i + 1);
+	$contador = 0;
+
+	for ($y=2; $y <= $i; $y++) { 
+
+		if ( ($i % $y) == 0){
+			$contador++;
+		}
+	}
+
+		if ($contador < 2) {
+			echo 'El número: ' . $i . ' es primo<br>';
+		}else{
+			echo 'El número: ' . $i . ' no es primo<br>';
+		}
 }
-
-echo "El resultado de $numero ! es: $resultado<br>";
-
-
-$resultado = 1;
-
-for ($i=1; $i <= $numero; $i++) { 
-	$resultado = $resultado * $i;
-}
-
-echo "El resultado de $numero ! es: $resultado<br>";
-
-$resultado = 1;
-$contador = 1;
-
-while ($contador <= $numero) {
-	$resultado = $resultado * $contador;
-	$contador++;
-}
-
-echo "El resultado de $numero ! es: $resultado<br>";
 
 
 
