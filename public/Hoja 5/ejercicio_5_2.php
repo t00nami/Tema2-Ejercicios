@@ -1,22 +1,33 @@
 <?php
 
-function calculaTiempo($tiempo){
+function cribaErastotenes(){
 
-	$arrayTiempo = preg_split("/[:]/", $tiempo);
+	$limite=100;
+	$numeros = [];
 
-	$segundos = $arrayTiempo[2] + ($arrayTiempo[1]*60) + ($arrayTiempo[0]*60*60);
+	for($i=0;$i<$limite;$i++){
+		$numeros[]=true;
+	}
 
-	return $segundos;
+
+	for ($j=2;$j<$limite;$j++){
+
+			for ($i=$j*$j;$i<$limite;$i+=$j){
+				$numeros[$i] = false;
+			}	
+	}
+
+	echo "Primos: ";
+	for ($n = 2; $n < $limite; $n++){
+
+		if ($numeros[$n]){
+			echo $n . " ";
+		}
+	}
 }
 
-$tiempo = "01:40:50";
-$tiempo2 = "01:00:00";
+cribaErastotenes();
 
-$tiempo1Calculado = calculaTiempo($tiempo);
-$tiempo2Calculado = calculaTiempo($tiempo2);
-$resultado = $tiempo1Calculado - $tiempo2Calculado;
-
-echo 'La diferencia de segundos entre ' . $tiempo . ' y ' . $tiempo2 . ' es de: ' . $resultado . ' segundos';
 
 ?>
 

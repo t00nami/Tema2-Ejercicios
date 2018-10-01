@@ -1,22 +1,27 @@
 <?php
 
-function calculaTiempo($tiempo){
+function sumaIndices(){
 
-	$arrayTiempo = preg_split("/[:]/", $tiempo);
+	$matriz = [];
 
-	$segundos = $arrayTiempo[2] + ($arrayTiempo[1]*60) + ($arrayTiempo[0]*60*60);
+	for ($i=0; $i < 4; $i++) { 
 
-	return $segundos;
+		$indice = 0;
+			
+		for ($j=0; $j < 7; $j++) { 
+			$matriz[$i][$j] = rand(1,9);
+			$indice += $matriz[$i][$j];
+			echo $matriz[$i][$j];
+		}
+
+		echo '<br>';
+		echo 'La suma de los valores del indice número: ' . $i . ' es igual a: ' . $indice;
+		echo '<br>';
+	}
+	
 }
 
-$tiempo = "01:40:50";
-$tiempo2 = "01:00:00";
-
-$tiempo1Calculado = calculaTiempo($tiempo);
-$tiempo2Calculado = calculaTiempo($tiempo2);
-$resultado = $tiempo1Calculado - $tiempo2Calculado;
-
-echo 'La diferencia de segundos entre ' . $tiempo . ' y ' . $tiempo2 . ' es de: ' . $resultado . ' segundos';
+sumaIndices();
 
 ?>
 

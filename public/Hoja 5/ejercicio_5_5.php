@@ -1,22 +1,58 @@
 <?php
 
-function calculaTiempo($tiempo){
+function productoMatrices(){
 
-	$arrayTiempo = preg_split("/[:]/", $tiempo);
+	$matriz1 = [];
+	$matriz2 = [];
 
-	$segundos = $arrayTiempo[2] + ($arrayTiempo[1]*60) + ($arrayTiempo[0]*60*60);
+	echo 'Primera matriz: <br>';
 
-	return $segundos;
+	for ($i=0; $i < 3; $i++) { 
+
+		$indice = 1;
+			
+		for ($j=0; $j < 3; $j++) { 
+			$matriz1[$i][$j] = rand(1,9);
+			$indice *= $matriz1[$i][$j];
+			echo $matriz1[$i][$j];
+		}
+
+		echo '<br>';
+	}
+
+	echo '<br>Segunda matriz: <br>';
+
+		for ($i=0; $i < 3; $i++) { 
+
+		$indice = 1;
+			
+		for ($j=0; $j < 3; $j++) { 
+			$matriz2[$i][$j] = rand(1,9);
+			$indice *= $matriz2[$i][$j];
+			echo $matriz2[$i][$j];
+		}
+
+		echo '<br>';
+	}
+
+	echo '<br>';
+	
+	for ($i=0; $i < 3; $i++) { 
+
+		$producto = 0;
+
+		for ($j=0,$k=0; $k < 3; $k++) { 
+			$producto += $matriz1[$i][$j] * $matriz2[$k][$j];
+		}
+
+			echo $producto;
+			echo '<br>';
+	}
+	
+	
 }
 
-$tiempo = "01:40:50";
-$tiempo2 = "01:00:00";
-
-$tiempo1Calculado = calculaTiempo($tiempo);
-$tiempo2Calculado = calculaTiempo($tiempo2);
-$resultado = $tiempo1Calculado - $tiempo2Calculado;
-
-echo 'La diferencia de segundos entre ' . $tiempo . ' y ' . $tiempo2 . ' es de: ' . $resultado . ' segundos';
+productoMatrices();
 
 ?>
 

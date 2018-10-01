@@ -1,26 +1,76 @@
-<?php
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ejercicio 5.1</title>
 
-function calculaTiempo($tiempo){
+	<style>
 
-	$arrayTiempo = preg_split("/[:]/", $tiempo);
+		table{
+			border-collapse: collapse;
+			margin: auto;
+			margin-top: 20px;
+		}
+		
+		table td{
+			border:2px solid black;
+		}
 
-	$segundos = $arrayTiempo[2] + ($arrayTiempo[1]*60) + ($arrayTiempo[0]*60*60);
 
-	return $segundos;
-}
+	</style>
 
-$tiempo = "01:40:50";
-$tiempo2 = "01:00:00";
+</head>
+<body>
 
-$tiempo1Calculado = calculaTiempo($tiempo);
-$tiempo2Calculado = calculaTiempo($tiempo2);
-$resultado = $tiempo1Calculado - $tiempo2Calculado;
+	<?php
 
-echo 'La diferencia de segundos entre ' . $tiempo . ' y ' . $tiempo2 . ' es de: ' . $resultado . ' segundos';
+variosCalculos();
+
+function variosCalculos(){
+
+	$arrayNumeros = [];
+
+	for ($i=0; $i < 19; $i++) { 
+		$numeroAleatorio = rand(0,10);
+		$arrayNumeros[] = $numeroAleatorio;
+	}
+
+	for ($i=0; $i < count($arrayNumeros); $i++) { 
+		$sumaArray += $arrayNumeros[$i];
+	}
+
+	echo 'La media de los números del array es de: ' . $sumaArray/20;
+
+	sort($arrayNumeros);
+
+	echo '<br>El array de números ordenados es: ';
+	foreach ($arrayNumeros as $numeros) {
+		echo $numeros;
+	}
 
 ?>
+
+<table>
+	<tr><td>Número</td><td>Repeticiones</td></tr>
+
+<?php
+
+	$arrayContado = array_count_values($arrayNumeros);
+
+	foreach ($arrayContado as $key => $value) {
+		echo '<tr><td>' . $key . '</td><td>' . $value . '</td></tr>';
+	}
+
+}
+
+?>
+
+</table>
 
 <br>
 <br>
 <br>
 <a href="../index.php">Regresar al menú</a>
+
+</body>
+</html>
+

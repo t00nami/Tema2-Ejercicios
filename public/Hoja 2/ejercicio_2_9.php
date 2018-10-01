@@ -5,14 +5,14 @@ for ($i=2; $i <= 100 ; $i++) {
 
 	$contador = 0;
 
-	for ($y=2; $y <= $i; $y++) { 
+	for ($y=1; $y <= $i; $y++) { 
 
 		if ( ($i % $y) == 0){
 			$contador++;
 		}
 	}
 
-		if ($contador < 2) {
+		if ($contador < 3) {
 			echo 'El número: ' . $i . ' es primo<br>';
 		}else{
 			echo 'El número: ' . $i . ' no es primo<br>';

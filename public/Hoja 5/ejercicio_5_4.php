@@ -1,22 +1,51 @@
 <?php
 
-function calculaTiempo($tiempo){
+function traspuesta(){
 
-	$arrayTiempo = preg_split("/[:]/", $tiempo);
+	$matriz = [];
+	$matrizTraspuesta = [];
 
-	$segundos = $arrayTiempo[2] + ($arrayTiempo[1]*60) + ($arrayTiempo[0]*60*60);
+	for ($i=0; $i < 4; $i++) { 
 
-	return $segundos;
+		$indice = 0;
+
+		for ($j=0; $j < 4; $j++) { 
+			$matriz[$i][$j] = rand(0,9);
+			$indice += $matriz[$i][$j];
+			echo $matriz[$i][$j];
+		}
+
+		echo '<br>';
+	}
+
+	echo 'Matriz traspuesta:<br>';
+
+
+
+	for ($i=0; $i < 4; $i++) {
+
+		for ($j=0,$m=0,$k=0; $k < 4; $k++,$j++) {
+			$matrizTraspuesta[$k][$m] = $matriz[$i][$j];
+			echo $matrizTraspuesta[$k][$m];
+		}
+		echo '<br>';	
+	}
+
+
+	//Darle la vuelta a un array
+	/*for ($i=0; $i < 4; $i++) { 
+
+		for ($j=4, $k=0; $j >= 0; $j--,$k++) {
+			$matrizTraspuesta[$k][$j] = $matriz[$i][$j];
+			echo $matrizTraspuesta[$k][$j];
+		}
+
+		echo '<br>';
+	}*/
+	
 }
 
-$tiempo = "01:40:50";
-$tiempo2 = "01:00:00";
-
-$tiempo1Calculado = calculaTiempo($tiempo);
-$tiempo2Calculado = calculaTiempo($tiempo2);
-$resultado = $tiempo1Calculado - $tiempo2Calculado;
-
-echo 'La diferencia de segundos entre ' . $tiempo . ' y ' . $tiempo2 . ' es de: ' . $resultado . ' segundos';
+traspuesta();
 
 ?>
 
