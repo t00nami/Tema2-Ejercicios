@@ -4,14 +4,14 @@ function sumaIndices(){
 
 	$matriz = [];
 
-	for ($i=0; $i < 4; $i++) { 
+	for ($i=0; $i < 7; $i++) { 
 
 		$indice = 0;
 			
-		for ($j=0; $j < 7; $j++) { 
-			$matriz[$i][$j] = rand(1,9);
-			$indice += $matriz[$i][$j];
-			echo $matriz[$i][$j];
+		for ($j=0; $j < 4; $j++) { 
+			$matriz[$j][$i] = rand(1,9);
+			$indice += $matriz[$j][$i];
+			echo $matriz[$j][$i] . " ";
 		}
 
 		echo '<br>';

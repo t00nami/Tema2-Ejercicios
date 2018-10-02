@@ -10,9 +10,9 @@ function traspuesta(){
 		$indice = 0;
 
 		for ($j=0; $j < 4; $j++) { 
-			$matriz[$i][$j] = rand(0,9);
-			$indice += $matriz[$i][$j];
-			echo $matriz[$i][$j];
+			$matriz[$j][$i] = rand(0,9);
+			$indice += $matriz[$j][$i];
+			echo $matriz[$j][$i] . " ";
 		}
 
 		echo '<br>';
@@ -24,13 +24,12 @@ function traspuesta(){
 
 	for ($i=0; $i < 4; $i++) {
 
-		for ($j=0,$m=0,$k=0; $k < 4; $k++,$j++) {
-			$matrizTraspuesta[$k][$m] = $matriz[$i][$j];
-			echo $matrizTraspuesta[$k][$m];
+		for ($j=0; $j < 4; $j++) {
+			$matrizTraspuesta[$j][$i] = $matriz[$i][$j];
+			echo $matrizTraspuesta[$j][$i] . " ";
 		}
 		echo '<br>';	
 	}
-
 
 	//Darle la vuelta a un array
 	/*for ($i=0; $i < 4; $i++) { 
