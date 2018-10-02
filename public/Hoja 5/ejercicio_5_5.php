@@ -39,46 +39,21 @@
 		}
 
 	echo '<br>';
-	
-	for ($i=0; $i < 3; $i++) {
 
-		$producto = 0; 
-
-		for ($m=0; $m < 3; $m++) { 
-
-			$producto += $matriz1[$m][0] * $matriz2[$i][$m];
-		}
-
-		$matrizResultado[$i][0] = $producto;
-	}
-
-	echo '<br>';
-
-
-	for ($i=0; $i < 3; $i++) {
-
-		$producto = 0; 
-
-		for ($m=0; $m < 3; $m++) { 
-
-			$producto += $matriz1[$m][1] * $matriz2[$i][$m];
-		}
-
-		$matrizResultado[$i][1] = $producto;
-	}
-
-	echo '<br>';
+	for ($z=0; $z < 3; $z++) {
 
 		for ($i=0; $i < 3; $i++) {
 
-		$producto = 0; 
+			$producto = 0; 
 
-		for ($m=0; $m < 3; $m++) { 
+			for ($m=0; $m < 3; $m++) { 
 
-			$producto += $matriz1[$m][2] * $matriz2[$i][$m];
+				$producto += $matriz1[$m][$z] * $matriz2[$i][$m];
+			}
+
+			$matrizResultado[$i][$z] = $producto;
 		}
 
-		$matrizResultado[$i][2] = $producto;
 	}
 
 
