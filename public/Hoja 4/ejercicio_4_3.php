@@ -1,22 +1,42 @@
 <?php
 
 
-function decodificar($texto){
+function decodificar($clave){
 
-	$textoCodificado = 'LEGREXIRDRVJLEKVOKFHLVTFEKZVEVKFURJCRJCVKIRJUVCRSVTVURIZFLEVAVDGCFVJTRURMVQHLVKIRSRAFWVCZODVGRXRLENYZJBP';
+	$textoCodificado = 'ALEGREXIRDRVJLEKVOKFHLVTFEKZVEVKFURJCRJCVKIRJUVCRSVTVURIZFLEVAVDGCFVJTRURMVQHLVKIRSRAFWVCZODVGRXRLENYZJBP';
 
-	$arrayTexto = str_split("FELIX");
+	$buscar = 'FELIX';
 
-	$caracteres = str_split($textoCodificado, 5);
-
-	for ($i=0; $i < count($caracteres); $i++) {
-
-		$subArray = str_split($caracteres[$i]);
+	for ($i=0; $i < strlen($textoCodificado); $i++) { 
 		
+		$letra = ord($textoCodificado[$i]);
+		$letra = $letra - $clave;
+
+		if ($letra < 65) {
+			$codigo = 65 - $letra;
+			$letra = 91 - $codigo;
+		}
+
+		$letra = chr($letra);
+
+		$textoCodificado[$i] = $letra;
 	}
+
+	if (substr_count($textoCodificado, $buscar)){
+		echo $textoCodificado;
+		return true;
+	}
+
 }
 
-decodificar("asd");
+$contador = 0;
+
+while ($contador <= 25) {
+	if (decodificar($contador)){
+		break;
+	}
+	$contador++;
+}
 
 ?>
 
