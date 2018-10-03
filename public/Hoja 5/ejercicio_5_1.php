@@ -29,7 +29,7 @@ function variosCalculos(){
 
 	$arrayNumeros = [];
 
-	for ($i=0; $i < 19; $i++) { 
+	for ($i=0; $i < 20; $i++) { 
 		$numeroAleatorio = rand(0,10);
 		$arrayNumeros[] = $numeroAleatorio;
 	}
